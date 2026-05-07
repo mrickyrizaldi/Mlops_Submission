@@ -1,0 +1,74 @@
+{
+  "evalConfig": {
+    "modelSpecs": [
+      {
+        "labelKey": "Outcome"
+      }
+    ],
+    "slicingSpecs": [
+      {}
+    ],
+    "metricsSpecs": [
+      {
+        "metrics": [
+          {
+            "className": "ExampleCount"
+          },
+          {
+            "className": "AUC",
+            "threshold": {
+              "valueThreshold": {
+                "lowerBound": 0.8
+              }
+            }
+          },
+          {
+            "className": "Recall",
+            "threshold": {
+              "valueThreshold": {
+                "lowerBound": 0.5
+              }
+            }
+          },
+          {
+            "className": "Precision",
+            "threshold": {
+              "valueThreshold": {
+                "lowerBound": 0.5
+              }
+            }
+          },
+          {
+            "className": "BinaryAccuracy",
+            "threshold": {
+              "valueThreshold": {
+                "lowerBound": 0.7
+              }
+            }
+          },
+          {
+            "className": "TruePositives"
+          },
+          {
+            "className": "FalsePositives"
+          },
+          {
+            "className": "TrueNegatives"
+          },
+          {
+            "className": "FalseNegatives"
+          }
+        ],
+        "modelNames": [
+          ""
+        ]
+      }
+    ]
+  },
+  "version": "0.42.0",
+  "dataLocation": "<user provided PCollection>",
+  "fileFormat": "<unknown>",
+  "modelLocations": {
+    "": "d:\\dicoding\\Submission_MLOps_2\\mrickyr-notebook\\pipelines\\mrickyr-pipeline\\Trainer\\model\\8\\Format-Serving"
+  }
+}
