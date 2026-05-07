@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    monitor: "tf-serving-railway-monitor"
+
+scrape_configs:
+  - job_name: "tf-serving-railway"
+    scrape_interval: 5s
+    metrics_path: /monitoring/prometheus/metrics
+    scheme: https          # PENTING: Railway pakai HTTPS
+    static_configs:
+      - targets: ['diabetespredictionmlops-production.up.railway.app']
